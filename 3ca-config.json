@@ -1,0 +1,44 @@
+{
+  "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+  "title": "Analysis of the Companies Register",
+  "summary": "Analysis of companies on the register in the United Kingdom at 31 March 2022 by age since incorporation",
+  "description": "1. Unless otherwise stated, 'Companies' refers to companies registered under the Companies Act 2006. 2. There may be minor discrepancies when comparing data across other tables within this report. This is due to slight scheduling variations when extracting the data. 3. Improvements to the categorisation of live companies on the register by age were introduced in 2022. This table may not be directly comparable to previous editions.",
+  "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "public_contact_point_uri": "mailto:statistics@companieshouse.gov.uk",
+  "themes": "https://www.ons.gov.uk/economy/economicoutputandproductivity",
+  "publisher": "https://www.gov.uk/government/organisations/companies-house",
+  "creator": "https://www.gov.uk/government/organisations/companies-house",
+  "dataset_issued": "2022-03-31T00:00:00Z",
+  "dataset_modified": "2022-03-31T00:00:00Z",
+  "keywords": [
+      "companies",
+      "companieshouse",
+      "liability",
+      "limited",
+      "company",
+      "corporate"
+  ],
+  "columns": {
+      "As at 31st March 2022": {
+          "type": "dimension",
+          "label": "All Companies"
+      },
+      "Comment": {
+          "type": "dimension",
+          "label": "Countries"
+      },
+      "Value": {
+          "type": "observations",
+          "measure": {
+              "label": "Value",
+              "description": "Percentage of companies on the register since incorporation",
+              "from_existing": "https://purl.org/csv-cubed/resources/measures#portion"
+          },
+          "data_type": "float",
+          "unit": {
+              "label": "Number",
+              "from_existing": "http://qudt.org/vocab/unit/PERCENT"
+          }
+      }
+  }
+}
